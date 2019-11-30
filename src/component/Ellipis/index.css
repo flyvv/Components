@@ -1,0 +1,12 @@
+.box{
+    font-size: 12px;
+    font-variant: tabular-nums;
+    line-height: 20px;
+    overflow: hidden;
+    height: auto;
+    padding: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: 1;
+}

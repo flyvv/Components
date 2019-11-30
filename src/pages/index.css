@@ -1,0 +1,43 @@
+
+.normal {
+  font-family: Georgia, sans-serif;
+  margin-top: 4em;
+  text-align: center;
+}
+
+.welcome {
+  height: 512px;
+  background: url(../assets/yay.jpg) no-repeat center 0;
+  background-size: 512px 512px;
+}
+
+.list {
+  font-size: 1.2em;
+  margin: 1.8em 0 0;
+  list-style: none;
+  line-height: 1.5em;
+}
+
+.list code {
+  background: #f7f7f7;
+}
+
+.mainContainer{
+  margin : 0 auto;
+  max-width: 1920px;
+  min-width: 1200px;
+  background: #eee;
+}
+
+.sider{
+  height: 100vh;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.content{
+  height: 100vh;
+  margin-top: 10px;
+  background: #ddd;
+  margin-left: 10px;
+}
