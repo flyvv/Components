@@ -3,10 +3,6 @@ import styles from './index.css';
 import { useEffect, useState } from 'react'; 
 import * as React from 'react';
 
-// import { Tooltip } from '@ali/oneui-canary';
-// import * as React from 'react';
-// import './Ellipis.scss';8
-
 const { useState, useEffect } = React;
 interface IProps {
     value: string | number | boolean;
