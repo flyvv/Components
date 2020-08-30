@@ -41,7 +41,7 @@ export default class LeftMenu extends React.Component<IProps, IState> {
                         title={
                             <span>
                                 <Icon type="setting" />
-                                <span>组件库啊</span>
+                                <span>组件库</span>
                             </span>
                         }
                     >
