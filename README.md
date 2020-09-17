@@ -1,3 +1,15 @@
-### Components 
-#### 下载依赖 npm i
-#### 项目启动 npm start
+# umi project
+
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ yarn
+```
+
+Start the dev server,
+
+```bash
+$ yarn start
+```

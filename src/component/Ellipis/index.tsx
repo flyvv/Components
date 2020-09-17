@@ -1,12 +1,11 @@
 import { Tooltip } from 'antd';
-import styles from './index.css';
-import { useEffect, useState } from 'react'; 
+import styles from './index.less';
 import * as React from 'react';
 
 const { useState, useEffect } = React;
 interface IProps {
     value: string | number | boolean;
-    style: React.cssProperties;
+    style?: React.CSSProperties;
     maxWidth?: number;
 }
 
@@ -23,8 +22,8 @@ const Ellipis: React.FunctionComponent<IProps> = ({ value, style, maxWidth }) =>
         }
     }, []);
     const text = (
-        <div className = {styles.box} ref = { textNode }
-            style = {{ ...style, maxWidth}}>
+        <div className={styles.box} ref={textNode}
+            style={{ ...style, maxWidth}}>
             {value}
         </div>
     )

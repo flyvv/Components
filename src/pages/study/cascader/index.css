@@ -1,0 +1,40 @@
+
+.play-wrap{
+    margin: 20px;
+    display: flex;
+}
+
+/* ---------container---------- */
+.flyvv-container-wrap{
+    margin-right: 20px;
+ 
+}
+
+.my-first{
+    width: 300px;
+}
+.item-container-wrapper{
+    min-width: 180px;
+    max-width: 240px;
+    min-height: 200px;
+    max-height: 200px ;
+   
+    border: 1px solid #ddd;
+
+}
+.item-container{
+    overflow: auto;
+    min-height: 200px;
+    max-height: 200px ;
+    min-width: 180px;
+    max-width: 240px;
+}
+.lfc-cascader-groups{
+    display: flex;
+}
+.lfc-cascader-wrap{
+    display: flex;
+}
+.lfc-cascader-groups-list-item_selected{
+    color: red;
+}

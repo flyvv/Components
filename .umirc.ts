@@ -1,54 +1,52 @@
-import { IConfig } from 'umi-types'; // ref: https://umijs.org/config/
+import { defineConfig } from 'umi';
 
-const config: IConfig = {
-  treeShaking: true,
+export default defineConfig({
   routes: [
     {
       path: '/',
       component: '../layouts/index',
       routes: [
         {
-          path: '/home',
+          path: '/',
           component: '../pages/index',
           routes: [
             {
-              path: '/home/components',
-              component: '../pages/home/List'
+              path: '/list',
+              component: '../pages/home/List/index'
             },
             {
-              path: '/home/study',
+              path: '/imageList',
+              component: '../pages/home/ImageList/index'
+            },
+            {
+              path: '/tagList',
+              component: '../pages/home/TagList/index'
+            },
+            {
+              path: '/ellipis',
+              component: '../pages/home/Ellipis/index'
+            },
+            {
+              path: '/study',
               component: '../pages/study/index'
             },
+            {
+              path:'/expandTable',
+              component:'../pages/home/ExpandTable/index'
+            }
           ],
         },
 
       ],
     },
   ],
-  plugins: [
-    // ref: https://umijs.org/plugin/umi-plugin-react.html
-    [
-      'umi-plugin-react',
-      {
-        antd: true,
-        dva: {
-          immer: true,
-        },
-        dynamicImport: false,
-        title: 'jkl',
-        dll: false,
-        routes: {
-          exclude: [
-            /models\//,
-            /services\//,
-            /model\.(t|j)sx?$/,
-            /service\.(t|j)sx?$/,
-            /components\//,
-          ],
-        },
-      },
-    ],
-  ],
-};
-export default config;
-
+  dva: {},
+  antd: {},
+  proxy: {
+    "/api/": {
+      "target": "https://pvp.qq.com/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api/": "" }
+    }
+  }
+});

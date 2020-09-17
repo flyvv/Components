@@ -1,19 +1,28 @@
-import React from 'react';
-import { Button } from 'antd';
-import styles from './index.css';
+import * as React from 'react';
+import Cascader from './cascader'
+import { Button} from 'antd';
 
-export default function() {
+import { connect, HeroModelState, ConnectProps } from 'umi';
+
+interface PageProps extends ConnectProps {
+  study: any;
+}
+
+
+const Study: React.FC<PageProps> = (props)=> {
+  const handleOnclick=() => {
+    props.dispatch!({
+      type: 'study/changecount', payload: {
+        count: props.study.count + 1
+      }
+    })
+  }
   return (
-    <div className={styles.normal}>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
-        <li>
-        <Button type="primary">Primary</Button>
-         <Button>ghvbjn</Button>
-        </li>
-      </ul>
+    <div className='normal'>
+      <div className='study'><Cascader /></div>
+  <Button type="primary" onClick={()=>handleOnclick()}>click count-{props.study.count}</Button>
     </div>
   );
 
 }
+export default connect(({study }: {study: any}) => ({ study}))(Study);

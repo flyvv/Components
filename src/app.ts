@@ -1,8 +1,9 @@
-export const dva = {
-  config: {
-    onError(err: ErrorEvent) {
-      err.preventDefault();
-      console.error(err.message);
-    },
+import { ResponseError } from 'umi-request';
+
+export const request = {
+  prefix: '/api',
+  errorHandler: (error: ResponseError) => {
+    // 集中处理错误
+    console.log(error);
   },
 };

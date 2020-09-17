@@ -1,0 +1,37 @@
+.tagListWrap {
+  display: flex;
+}
+
+.title {
+  font-size: 14px;
+  margin: 3px 7px 8px 10px;
+  padding: 0 7px;
+  flex: 0 0 auto;
+}
+
+.tag {
+  margin: 0 8px 10px 0;
+  box-sizing: border-box;
+  list-style: none;
+  height: auto;
+  padding: 0 7px;
+  font-size: 16px;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: default;
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.78 0.14 0.15 0.86);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.tag:hover {
+  opacity: 0.85;
+  background: #1890ff;;
+  color: #fff;
+  /* border: 1px solid #000; */
+  
+}

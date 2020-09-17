@@ -30,14 +30,14 @@
 }
 
 .sider{
-  height: 100vh;
+  height: 92vh;
   background: #fff;
   margin-top: 10px;
 }
 
 .content{
-  height: 100vh;
+  height: 92vh;
   margin-top: 10px;
-  background: #ddd;
+  background: #fff;
   margin-left: 10px;
 }
