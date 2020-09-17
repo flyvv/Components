@@ -1,10 +1,14 @@
 {
   "private": true,
+  "homepage":"https://flyvv.github.io/Components",
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b master",
+    "pub": "umi gh-pages",
     "test:coverage": "umi-test --coverage"
   },
   "gitHooks": {
@@ -27,5 +31,8 @@
     "react-dom": "^16.12.0",
     "umi": "^3.0.16",
     "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
