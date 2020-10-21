@@ -25,33 +25,37 @@ export default function() {
       name: 'John Brown',
       age: 32,
       address: 'New York No. 1 Lake Park',
-      description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.',
+      description:
+        'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.',
     },
     {
       key: 2,
       name: 'Jim Green',
       age: 42,
       address: 'London No. 1 Lake Park',
-      description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+      description:
+        'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
     },
     {
       key: 3,
       name: 'Joe Black',
       age: 32,
       address: 'Sidney No. 1 Lake Park',
-      description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+      description:
+        'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
     },
   ];
   return (
-    <div style={{height:'100px',overflow:'hidden'}}>
-      <ExpandTable
+    <div style={{ height: '100px', overflow: 'hidden' }}>
+      暂未开通
+      {/* <ExpandTable
         columns={columns}
         data={data}
         onChange={(v, selectedRowKeys) => console.log(v, selectedRowKeys, 'father')}
         tableOptions={{
           scroll: { y: 100 },
         }}
-      />
+      /> */}
     </div>
   );
 }

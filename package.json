@@ -1,6 +1,6 @@
 {
   "private": true,
-  "homepage":"https://flyvv.github.io/Components",
+  "homepage": "https://flyvv.github.io/Components",
   "scripts": {
     "start": "umi dev",
     "build": "umi build",

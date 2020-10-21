@@ -1,31 +1,39 @@
 import React from 'react';
-import {Button} from 'antd';
-import styles from './index.css'
+import { Button } from 'antd';
+import styles from './index.css';
 type content = number | string | boolean;
 interface IProps {
-    // 删除操作
-    handleDeleteList: (text: any) => void;
-    // 列表项信息
-    text: content;
+  // 删除操作
+  handleDeleteList: (text: any) => void;
+  // 列表项信息
+  text: content;
 }
 
-class Item extends React.Component<IProps>{
-  constructor(props:IProps ){
+class Item extends React.Component<IProps> {
+  constructor(props: IProps) {
     super(props);
   }
 
   handleDelete = (text: content) => {
     this.props.handleDeleteList(text);
-  }
+  };
 
-  render(){
+  render() {
     const { text } = this.props;
-    return(
-      <div>
+    return (
+      <div style={{ lineHeight: '32px' }}>
         <span className={styles.text}>{text}</span>
-        <Button type="primary" onClick = {()=>{this.handleDelete(text)}}>删除</Button>
+        <Button
+          type="primary"
+          size="small"
+          onClick={() => {
+            this.handleDelete(text);
+          }}
+        >
+          删除
+        </Button>
       </div>
-    )
+    );
   }
 }
 export default Item;

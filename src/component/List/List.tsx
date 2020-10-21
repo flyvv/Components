@@ -30,7 +30,7 @@ class List extends React.Component<IListProps, IState> {
 
   render() {
     return (
-      <div>
+      <div style={{ margin: 20 }}>
         {this.state.list.map((item, index) => (
           <Item text={item} handleDeleteList={this.handleDeleteList} />
         ))}

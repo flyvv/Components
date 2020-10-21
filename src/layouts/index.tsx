@@ -3,18 +3,18 @@ import Header from './component/Header/index';
 import { Layout } from 'antd';
 import LeftMenu from './component/index';
 
-import styles from './index.less';
+import './index.less';
 const { Sider, Content } = Layout;
 const BasicLayout: React.FC = props => {
   return (
-    <div className={styles.anNuanWrapper}>
-      <Layout className={styles.mainContainer}>
+    <div className="home-wrapper">
+      <Layout className="mainContainer">
         <Header />
         <Layout>
-          <Sider className={styles.sider}>
+          <Sider className="sider">
             <LeftMenu />
           </Sider>
-          <Content className={styles.content}>{props.children}</Content>
+          <Content className="content">{props.children}</Content>
         </Layout>
       </Layout>
     </div>
